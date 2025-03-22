@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Música Clásica</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <h1>Música Clásica</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#compositores">Compositores</a></li>
+                <li><a href="#obras">Obras Destacadas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+     <!-- division de secciones -->
+    <section id="inicio">
+        <h2>Descubre la Belleza de la Música Clásica</h2>
+        <p>Explora la historia y las piezas más icónicas de la música clásica.</p>
+    </section>
+    <img src="/assets/compositores.jpg" alt="compositores">
+    
+    <section id="compositores">
+        <h2>Compositores Famosos</h2>
+        <audio id="mozart" src="musica/Piano-sonata-no-11.mp3"></audio>  
+        <button class="botonplay" onclick="playAudio()"></button>
+        <button class="botonpausa" onclick="pauseAudio()"></button> 
+        <script>
+            const audio = document.getElementById("mozart");
+            function playAudio() {
+                audio.play();
+            }
+            function pauseAudio() {
+                audio.pause();
+            }
+            audio.addEventListener('ended', () => {
+                console.log('La música ha terminado');
+            });
+        </script>
+        <p class="duracion4">5:00</p>
+
+        <!-- lista de compositores -->
+        <ul>
+            <li>🎼 Ludwig van Beethoven</li>
+            <img id="beethoven" src="/assets/beethoven.jpg" alt="beethoven">
+            <p id="pbeethoven">Ludwig van Beethoven fue un compositor, director de orquesta, pianista y profesor de piano alemán. Su legado musical abarca, cronológicamente, desde el Clasicismo hasta los inicios del Romanticismo.</p>
+            <li>🎼 Wolfgang Amadeus Mozart</li>
+            <img id="mozartt" src="/assets/mozart.jpg" alt="mozart1">
+            <p id="pmozartt">Johannes Chrysostomus Wolfgangus Theophilus Mozart, más conocido como Wolfgang Amadeus Mozart, fue un compositor, pianista, director de orquesta y profesor alemán, del antiguo Arzobispado de Salzburgo. Maestro del clasicismo, es considerado como uno de los músicos más influyentes y destacados de la historia.</p>
+            <li>🎼 Johann Sebastian Bach</li>
+            <img id="bach" src="/assets/bach.jpg" alt="bach">
+            <p id="pbach">Johann Sebastian Bach fue un compositor, músico, director de orquesta, maestro de capilla, cantor y profesor alemán del período barroco. Fue el miembro más importante de una de las familias de músicos más destacadas de la historia, con más de 35 compositores famosos: la familia Bach. </p>
+            <li>🎼 Pyotr Ilyich Tchaikovsky</li>
+            <img id="tchaikovsky" src="/assets/tchaikovsky.jpg" alt="tchaikovsky">
+            <p id="ptchaikovsky">Johann Sebastian Bach fue un compositor, músico, director de orquesta, maestro de capilla, cantor y profesor alemán del período barroco. Fue el miembro más importante de una de las familias de músicos más destacadas de la historia, con más de 35 compositores famosos: la familia Bach. </p>
+        </ul>
+    </section>
+    <!-- lista de obras -->
+    <section id="obras">
+        <h2>Obras Destacadas</h2>
+        <ul>
+           <a href="https://youtu.be/tpGSzH0Wlls?feature=shared"><li>🎶 Sinfonía No. 9 - Beethoven</li></a> 
+           <a href="https://youtu.be/54h8TxJyNy0?feature=shared"><li>🎶 Réquiem - Mozart</li></a> 
+           <a href="https://youtu.be/ruGohGBXB0c?feature=shared"><li>🎶 El arte de la fuga - Bach</li></a>
+           <a href="https://youtu.be/tnWR9dtaIMs?feature=shared"><li>🎶 El lago de los cisnes - Tchaikovsky</li></a>
+        </ul>
+        <audio id="mozart" src="musica/Piano-sonata-no-11.mp3"></audio>  
+            <button class="botonplay" onclick="playAudio()"></button>
+            <button class="botonpausa" onclick="pauseAudio()"></button> 
+            <script>
+                const audio = document.getElementById("mozart");
+                function playAudio() {
+                    audio.play();
+                }
+                function pauseAudio() {
+                    audio.pause();
+                }
+                audio.addEventListener('ended', () => {
+                    console.log('La música ha terminado');
+                });
+            </script>
+            <p class="duracion4">5:00</p>
+    </section>
+    <!-- para contactarnos -->
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>¿Quieres saber más? Contáctanos en: <a href="mailto:yamecanse@gmail.com">yamecanse@gmail.com</a></p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Música Clásica. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
